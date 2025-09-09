@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Tickets Booking - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #555;
+        }
+        .btn-login {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.5);
+        }
+        .extra-links {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .extra-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+        .extra-links a:hover {
+            color: #764ba2;
+        }
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.2;
+        }
+        .bg-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .icon-input {
+            position: relative;
+        }
+        .icon-input i {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            color: #aaa;
+        }
+        @media (max-width: 600px) {
+            .login-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image">
+        <img src="https://placehold.co/1200x800" alt="Scenic train tracks winding through lush green mountains at golden hour, with a vintage steam locomotive approaching a picturesque station under a clear blue sky, featuring detailed greenery, wooden platform, and fluffy white clouds for a serene travel ambiance">
+    </div>
+    <div class="login-container">
+        <h1><i class="fas fa-train"></i> Train Tickets Booking</h1>
+        <form id="loginForm">
+            <div class="input-group icon-input">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username or email">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group icon-input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <i class="fas fa-lock"></i>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        <div class="extra-links">
+            <a href="#">Forgot Password?</a> | 
+            <a href="#">Sign Up</a>
+        </div>
+    </div>
+
+    <script>
+        // Simple form validation and demo interaction
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Basic validation
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Simulate login success (in a real app, this would be sent to server)
+            alert(`Welcome back, ${username}! Redirecting to dashboard...`);
+            // Here you could redirect: window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>
